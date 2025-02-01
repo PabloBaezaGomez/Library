@@ -1,0 +1,159 @@
+
+
+/* Estilo global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Cabecera */
+h1 {
+  text-align: center;
+  color: #444;
+  margin-top: 20px;
+}
+
+/* Contenedor principal */
+div.formulario {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Estilo de los inputs y botones */
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo de las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+/* Diseño de los botones de acción */
+button:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(72, 172, 72, 0.6);
+}
+
+/* Estilo de los formularios cuando no están visibles */
+#formularioPeliculas,
+#formularioAnime {
+  display: none;
+}
+
+/* Estilo de los botones para formularios */
+button[onclick^="mostrarFormulario"] {
+  background-color: #008cba;
+  margin: 10px;
+}
+
+button[onclick^="mostrarFormulario"]:hover {
+  background-color: #007b9d;
+}
+
+/* Ajustes en los contenedores de listado y botones */
+#tablas {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+input[type="text"]#titulo {
+  width: 60%;
+  display: inline-block;
+}
+
+input[type="text"]#genre {
+  width: 60%;
+  display: inline-block;
+}
+
+button[onclick="borrar('anime')"],
+button[onclick="borrar('pelicula')"] {
+  background-color: #f44336;
+}
+
+button[onclick="borrar('anime')"]:hover,
+button[onclick="borrar('pelicula')"]:hover {
+  background-color: #e53935;
+}
+
+button[onclick="ejemplo()"] {
+  background-color: #ff9800;
+  margin-top: 20px;
+}
+
+button[onclick="ejemplo()"]:hover {
+  background-color: #fb8c00;
+}
+
+/* Estilo para los formularios visibles */
+#formularioPeliculas,
+#formularioAnime {
+  display: none;
+}
+

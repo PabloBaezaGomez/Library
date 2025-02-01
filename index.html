@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegir Formulario</title>
+    <link rel="stylesheet" href="peliculas.css" />
+    <script src="peliculas.js" defer></script>
+  </head>
+  <body>
+    <h1>Seleccione el tipo de formulario</h1>
+    <button onclick="mostrarFormulario('peliculas')">
+      Formulario de Películas
+    </button>
+    <button onclick="mostrarFormulario('anime')">Formulario de Animes</button>
+
+    <!-- Formulario de Películas -->
+    <div id="formularioPeliculas" class="formulario">
+      <h2>Formulario de Películas</h2>
+      <label for="tituloPelicula">Título de la película:</label>
+      <input type="text" id="tituloPelicula" name="tituloPelicula" required />
+      <br /><br />
+
+      <label for="generoPelicula">Género:</label>
+      <input type="text" id="generoPelicula" name="generoPelicula" required />
+      <br /><br />
+
+      <label for="yearPelicula">Año:</label>
+      <input type="number" id="yearPelicula" name="yearPelicula" required />
+      <br /><br />
+
+      <label for="duracion">Duracion:</label>
+      <input type="number" id="duracion" name="duracion" required />
+      <br /><br />
+
+      <label for="favPelicula">Películas favoritas:</label>
+      <input type="checkbox" id="favPelicula" name="favPelicula" required />
+      <br /><br />
+
+      <label for="puntuacionPelicula">Puntuacion:</label>
+      <input
+        type="number"
+        id="puntuacionPelicula"
+        name="puntuacionPelicula"
+        min="1"
+        max="10"
+        required
+      />
+      <br /><br />
+
+      <button onclick="newFilm()">Añadir Película</button>
+    </div>
+
+    <!-- Formulario de Anime -->
+    <div id="formularioAnime" class="formulario">
+      <h2>Formulario de Animes</h2>
+      <label for="tituloAnime">Título del anime:</label>
+      <input type="text" id="tituloAnime" name="tituloAnime" required />
+      <br /><br />
+
+      <label for="generoAnime">Género:</label>
+      <input type="text" id="generoAnime" name="generoAnime" required />
+      <br /><br />
+
+      <label for="yearAnime">Año:</label>
+      <input type="number" id="yearAnime" name="yearAnime" required />
+      <br /><br />
+
+      <label for="episodios">Episodios:</label>
+      <input type="number" id="episodios" name="episodios" required />
+      <br /><br />
+
+      <label for="favAnime">Animes favoritos:</label>
+      <input type="checkbox" id="favAnime" name="favAnime" required />
+      <br /><br />
+
+      <label for="puntuacionAnime">Puntuacion:</label>
+      <input
+        type="number"
+        id="puntuacionAnime"
+        name="puntuacionAnime"
+        min="1"
+        max="10"
+        required
+      />
+      <br /><br />
+
+      <button onclick="newAnime()">Añadir Anime</button>
+    </div>
+    <br /><br />
+    <button onclick="mostrarListado()">Listado Completo</button>
+    <button onclick="mejores()">Clasificar por Puntuacion</button>
+    <br>
+    <input type="text" id="genre" placeholder="Género">
+    <button onclick="filtrarGenero()">Clasificar por Género</button>
+    <br>
+    <input type="text" id="titulo" placeholder="Título">
+    <button onclick="borrar('anime')">Borrar Anime</button>
+    <button onclick="borrar('pelicula')">Borrar Pelicula</button>
+    <div id="tablas"></div>
+    <button onclick="ejemplo()">Añadir de ejemplo</button>
+  </body>
+</html>
